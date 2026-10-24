@@ -1,0 +1,576 @@
+/* ==============================
+   Font Faces
+============================== */
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./Fonts/Montserrat-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./Fonts/Montserrat-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./Fonts/Montserrat-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ==============================
+   Reset
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    direction: ltr;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-weight: 400;
+
+    background:
+        radial-gradient(circle at 20% 20%,
+            rgba(255, 0, 0, 0.05),
+            transparent 30%),
+        radial-gradient(circle at 80% 80%,
+            rgba(255, 255, 255, 0.04),
+            transparent 30%),
+        #0b0b0b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding: 20px;
+}
+
+
+/* ==============================
+   Main Container
+============================== */
+
+.container {
+    direction: ltr;
+
+    background-color: #f5f5f5;
+
+    border-radius: 24px;
+    border: 1px solid #3a3a3a;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.7),
+        0 0 30px rgba(255, 0, 0, 0.05);
+
+    position: relative;
+    overflow: hidden;
+
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+
+/* ==============================
+   Headings & Text
+============================== */
+
+.container h1 {
+    color: #111;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+.container p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 20px 0;
+}
+
+.container span {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* ==============================
+   Links
+============================== */
+
+.container a {
+    color: #555;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+    transition: color 0.3s ease;
+}
+
+.container a:hover {
+    color: #e00000;
+}
+
+
+/* ==============================
+   Buttons
+============================== */
+
+.container button {
+    background-color: #d90000;
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    padding: 11px 45px;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    margin-top: 10px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #ff1010;
+
+    box-shadow:
+        0 0 18px rgba(255, 0, 0, 0.35);
+
+    transform: translateY(-2px);
+}
+
+.container button:active {
+    transform: scale(0.97);
+}
+
+.container button:focus-visible,
+.container a:focus-visible {
+    outline: 2px solid #d90000;
+    outline-offset: 4px;
+}
+
+.container button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+.container button.hidden:hover {
+    background-color: #fff;
+    color: #111;
+    box-shadow: none;
+}
+
+
+/* ==============================
+   Forms
+============================== */
+
+.container form {
+    direction: ltr;
+
+    background-color: #f5f5f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 0 40px;
+
+    height: 100%;
+    text-align: left;
+}
+
+.container input {
+    direction: ltr;
+    text-align: left;
+
+    background-color: #e4e4e4;
+    color: #111;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    width: 100%;
+
+    margin: 8px 0;
+    padding: 11px 15px;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.container input::placeholder {
+    color: #888;
+    text-align: left;
+    opacity: 1;
+}
+
+.container input:focus {
+    border-color: #d90000;
+    background-color: #eee;
+
+    box-shadow:
+        0 0 0 3px rgba(217, 0, 0, 0.08);
+}
+
+
+/* ==============================
+   Form Containers
+============================== */
+
+.form-container {
+    position: absolute;
+    top: 0;
+
+    height: 100%;
+
+    transition: all 0.6s ease-in-out;
+}
+
+.form-container h1,
+.form-container span {
+    text-align: center;
+}
+
+
+/* Login Form */
+
+.sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.active .sign-in {
+    transform: translateX(100%);
+}
+
+
+/* Sign Up Form */
+
+.sign-up {
+    left: 0;
+    width: 50%;
+
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.active .sign-up {
+    transform: translateX(100%);
+
+    opacity: 1;
+    z-index: 5;
+
+    animation: move 0.6s;
+}
+
+
+/* ==============================
+   Form Animation
+============================== */
+
+@keyframes move {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+
+/* ==============================
+   Social Icons
+============================== */
+
+.social-icons {
+    margin: 20px 0;
+    direction: ltr;
+}
+
+.social-icons a {
+    border: 1px solid #c7c7c7;
+    border-radius: 10px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 3px;
+
+    width: 40px;
+    height: 40px;
+
+    color: #333;
+    font-size: 18px;
+
+    transition:
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.social-icons a:hover {
+    border-color: #d90000;
+    color: #d90000;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 15px rgba(217, 0, 0, 0.12);
+}
+
+
+/* ==============================
+   Toggle Container
+============================== */
+
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 50%;
+    height: 100%;
+
+    overflow: hidden;
+
+    transition: all 0.6s ease-in-out;
+
+    border-radius: 24px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 24px;
+}
+
+
+/* ==============================
+   Toggle Background
+============================== */
+
+.toggle {
+    background: linear-gradient(145deg,
+            #151515,
+            #242424);
+
+    height: 100%;
+    width: 200%;
+
+    color: #fff;
+
+    position: relative;
+    left: -100%;
+
+    transform: translateX(0);
+
+    transition: all 0.6s ease-in-out;
+
+    border-left: 1px solid #444;
+}
+
+.container.active .toggle {
+    transform: translateX(50%);
+}
+
+
+/* Decorative Circle */
+
+.toggle::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    background: rgba(220, 0, 0, 0.12);
+
+    border-radius: 50%;
+
+    top: -80px;
+    right: -70px;
+
+    filter: blur(10px);
+
+    pointer-events: none;
+}
+
+.toggle::after {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    border: 1px solid rgba(255, 0, 0, 0.25);
+    border-radius: 50%;
+
+    bottom: -70px;
+    left: -50px;
+
+    pointer-events: none;
+}
+
+
+/* ==============================
+   Toggle Panels
+============================== */
+
+.toggle-panel {
+    direction: ltr;
+
+    position: absolute;
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 0 40px;
+
+    text-align: center;
+
+    top: 0;
+
+    transform: translateX(0);
+
+    transition: all 0.6s ease-in-out;
+
+    z-index: 2;
+}
+
+.toggle-panel h1 {
+    color: #fff;
+
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    margin-bottom: 5px;
+}
+
+.toggle-panel p {
+    color: #bdbdbd;
+
+    max-width: 280px;
+    line-height: 1.7;
+}
+
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left {
+    transform: translateX(0);
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+
+/* ==============================
+   Tablet & Mobile
+============================== */
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        min-height: 600px;
+    }
+
+    .container form {
+        padding: 0 25px;
+    }
+
+    .toggle-panel {
+        padding: 0 20px;
+    }
+
+    .toggle-panel h1 {
+        font-size: 22px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    .social-icons a {
+        width: 36px;
+        height: 36px;
+        margin: 0 2px;
+    }
+}
+
+
+/* ==============================
+   Reduced Motion Accessibility
+============================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

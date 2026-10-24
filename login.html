@@ -1,0 +1,172 @@
+```html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./boxicons/css/boxicons.min.css">
+
+    <title>Login & Sign Up</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+
+        <!-- Sign Up Form -->
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+
+                <div class="social-icons">
+                    <a href="#" class="icons" aria-label="Sign up with Google">
+                        <i class="bx bxl-google"></i>
+                    </a>
+
+                    <a href="#" class="icons" aria-label="Sign up with Facebook">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+
+                    <a href="#" class="icons" aria-label="Sign up with GitHub">
+                        <i class="bx bxl-github"></i>
+                    </a>
+
+                    <a href="#" class="icons" aria-label="Sign up with LinkedIn">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                </div>
+
+                <span>Or sign up with your email</span>
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Full Name"
+                    autocomplete="name"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    name="phone"
+                    dir="ltr"
+                    maxlength="11"
+                    inputmode="numeric"
+                    autocomplete="tel"
+                    placeholder="Phone Number (Optional)"
+                >
+
+                <input
+                    type="email"
+                    name="email"
+                    dir="ltr"
+                    placeholder="Enter Your Email"
+                    autocomplete="email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    name="password"
+                    dir="ltr"
+                    placeholder="Create a Password"
+                    autocomplete="new-password"
+                    required
+                >
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-container sign-in">
+            <form>
+                <h1>Login</h1>
+
+                <div class="social-icons">
+                    <a href="#" class="icons" aria-label="Login with Google">
+                        <i class="bx bxl-google"></i>
+                    </a>
+
+                    <a href="#" class="icons" aria-label="Login with Facebook">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+
+                    <a href="#" class="icons" aria-label="Login with GitHub">
+                        <i class="bx bxl-github"></i>
+                    </a>
+
+                    <a href="#" class="icons" aria-label="Login with LinkedIn">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                </div>
+
+                <span>Or login with email and password</span>
+
+                <input
+                    type="email"
+                    name="email"
+                    dir="ltr"
+                    placeholder="Enter Your Email"
+                    autocomplete="email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    name="password"
+                    dir="ltr"
+                    placeholder="Enter Your Password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <a href="#">Forgot Your Password?</a>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Toggle Panels -->
+        <div class="toggle-container">
+            <div class="toggle">
+
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+
+                    <p>Login to your account to continue</p>
+
+                    <button
+                        class="hidden"
+                        type="button"
+                        id="login"
+                    >
+                        Login
+                    </button>
+                </div>
+
+                <div class="toggle-panel toggle-right">
+                    <h1>Join Us</h1>
+
+                    <p>Create your account and get started today</p>
+
+                    <button
+                        class="hidden"
+                        type="button"
+                        id="register"
+                    >
+                        Sign Up
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./login.js"></script>
+</body>
+
+</html>
